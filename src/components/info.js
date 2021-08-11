@@ -33,7 +33,7 @@ class Info extends React.Component {
               </div>
             </div>
             <div className="Info-detail">
-              <h4 className="Info-detail-title">Frameworks, Libraries<br/> & Softwares</h4>
+              <h4 className="Info-detail-title">Frameworks, Libraries & Softwares</h4>
               <div className="Info-detail-list">
                 {frameworks.map((frame) => (
                   <p className="Info-detail-info">{frame.title}</p>

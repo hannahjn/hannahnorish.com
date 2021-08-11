@@ -7,11 +7,16 @@
   100% {transform: translateY(0px);}
 }
 
+//Colour variables
+$c-black: #000000;
+$c-ivory: #eaeaea;
+$c-cerulean: #78DEC7;
+
 /* The element to apply the animation to */
 
 .App {
   text-align: center;
-  color: #000000;
+  color: $c-black;
 }
 .Navbar {
     padding: 30px 0;
@@ -33,7 +38,7 @@
   &-link {
     margin: auto 25px;
     text-decoration: none;
-    color: #eaeaea;
+    color: $c-ivory;
     transition: all ease-in-out 0.2s;
     @media (max-width: 425px) {
       margin: auto 17px;
@@ -41,18 +46,18 @@
 
     &:hover {
       text-decoration: none;
-      color: #78DEC7;
+      color: $c-cerulean;
     }
   }
 
   &-title {
     text-decoration: none;
-    color: #eaeaea;
+    color: $c-ivory;
     transition: all ease-in-out 0.2s;
     svg {
       transform: translateY(4px);
       margin-left: 15px;
-      fill: #eaeaea;
+      fill: $c-ivory;
       height: 18px;
       width: 18px;
       transition: all ease-in-out 0.2s;
@@ -60,9 +65,9 @@
 
     &:hover {
       text-decoration: none;
-      color: #78DEC7;
+      color: $c-cerulean;
       svg {
-        fill: #78DEC7;
+        fill: $c-cerulean;
       }
     }
 
@@ -70,18 +75,19 @@
 }
 .Header{
   font-family: Abril Fatface;
-  background-color: #000000;
-  color: #eaeaea;
+  background-color: $c-black;
+  color: $c-ivory;
 
   &-text {
     width: 90%;
     margin: auto;
     padding-top: 75px;
-    font-size: 3.6rem;
+    font-size: 3.3vw;
     letter-spacing: 6px;
+    text-align: left;
     @media (max-width: 425px) {
-      font-size: 2.1rem;
-      padding-top:50px;
+      font-size: 8.2vw;
+      padding-top: 25px;
     }
     h1 {
       margin-bottom: 0px;
@@ -89,11 +95,14 @@
   }
   &-icon {
     text-align: center;
+    @media (max-width: 425px) {
+      margin-top: 15px;
+    }
     svg {
       height: 75px;
       width: 120px;
       margin-left: -55px;
-      fill: #eaeaea;
+      fill: $c-ivory;
       transform:translateY(0px);
       animation-name: bounce;
       animation-duration: 1.5s;
@@ -126,30 +135,30 @@
   &-link {
     margin: auto 25px;
     text-decoration: none;
-    color: #eaeaea;
+    color: $c-ivory;
     transition: all ease-in-out 0.2s;
 
     &:hover {
       text-decoration: none;
-      color: #78DEC7;
+      color: $c-cerulean;
     }
     &-icon {
       svg {
         height: 25px;
         width: 25px;
         margin: 20px 0 0;
-        fill: #eaeaea;
+        fill: $c-ivory;
         transition: all ease-in-out 0.2s;
         &:hover {
-          fill: #78DEC7;
+          fill: $c-cerulean;
         }
       }
     }
   }
 }
 .Info {
-  background-color: #000000;
-  color: #eaeaea;
+  background-color: $c-black;
+  color: $c-ivory;
   &-inner {
     max-width: 90%;
     margin: 0px auto;
@@ -175,13 +184,18 @@
   &-title, &-detail-title {
     font-family: Abril Fatface;
   }
+  &-detail-title {
+    font-size: 48px;
+    margin-bottom: 35px;
+    margin-top: 25px;
+  }
   &-about {
     text-align: center;
     max-width: 75%;
     margin: auto;
     font-weight: normal;
     a {
-      color: #eaeaea;
+      color: $c-ivory;
       text-decoration: none;
       position: relative;
       transition: all ease-in-out 0.2s;
@@ -192,13 +206,13 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: #eaeaea;
+        background-color: $c-ivory;
         transition: all ease-in-out 0.2s;
       }
       &:hover {
-        color: #78DEC7;
+        color: $c-cerulean;
         &:after {
-          background-color: #78DEC7;;
+          background-color: $c-cerulean;;
         }
       }
     }
@@ -242,12 +256,12 @@
 
 .Projects {
   padding: 100px 20px;
-  background-color: #000000;
+  background-color: $c-black;
   @media (max-width: 768px) {
     padding: 25px 20px;
   }
   &-header {
-    color: #eaeaea;
+    color: $c-ivory;
     text-align: center;
     font-size: 60px;
     font-family: Abril Fatface;
@@ -265,6 +279,7 @@
   min-height: 375px;
   text-decoration: none;
   transition: all ease-in-out 0.2s;
+  margin-bottom: 25px;
   @media (max-width: 768px) {
     width: 45%;
   }
@@ -276,7 +291,7 @@
   }
   &:hover {
     .ProjectCard-title {
-      color: #78DEC7;
+      color: $c-cerulean;
       text-decoration: none;
     }
     transform: scale(1.02);
@@ -293,7 +308,7 @@
   }
   &-imageWrapper {
     width: 100%;
-    height:80%;
+    padding-bottom: 30%;
     min-height: 225px;
     background-position: center center;
     background-repeat: no-repeat;
@@ -313,7 +328,7 @@
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
     letter-spacing: 1px;
-    color: #eaeaea;
+    color: $c-ivory;
 
   }
 
@@ -322,13 +337,13 @@
 .Contact {
   text-align: center;
   padding: 0 20px 100px;
-  background-color: #000000;
+  background-color: $c-black;
   &-title {
     font-size: 60px;
     font-family: Abril Fatface;
     text-align: center;
     margin-bottom: 25px;
-    color: #eaeaea;
+    color: $c-ivory;
     margin-top:0;
   }
   &-subtitle, &-email {
@@ -336,14 +351,14 @@
     font-weight: bold;
     letter-spacing: 1px;
     text-decoration: none;
-    color: #eaeaea;
+    color: $c-ivory;
     margin-bottom: 25px;
     font-size: 24px;
   }
   &-email {
     transition: all ease-in-out 0.2s;
     &:hover {
-      color: #78DEC7;
+      color: $c-cerulean;
     }
   }
   &-links {
@@ -352,10 +367,10 @@
       height: 40px;
       width: 40px;
       margin: 20px;
-      fill: #eaeaea;
+      fill: $c-ivory;
       transition: all ease-in-out 0.2s;
       &:hover {
-        fill: #78DEC7;
+        fill: $c-cerulean;
       }
     }
   }
