@@ -1,9 +1,12 @@
 import './App.css';
 import React from 'react';
 import Navbar from './components/navbar.js';
+import StickyLinks from './components/sticky-links';
 import Header from './components/header.js';
 import Info from './components/info.js';
 import Projects from './components/projects.js';
+import Contact from './components/contact.js';
+
 
 // project images
 import illesteva from './images/illesteva.jpg';
@@ -63,12 +66,21 @@ function App() {
     { title:'Camillette', link: 'https://camillette.com/', img: camillette },
   ]
 
+  const contact = [
+    { title: 'Github', value:'https://github.com/hannahjn' },
+    { title: 'Resume', value:'https://resume.creddle.io/resume/h01xyebzkzq' },
+    { title: 'LinkedIn', value:'https://resume.creddle.io/resume/h01xyebzkzq' }
+  ]
+
   return (
     <div className="App">
       <Navbar links={links}/>
+      <StickyLinks />
+
       <Header />
       <Info frameworks={frameworks} languages={languages} />
       <Projects projects={projects} />
+      <Contact contact={contact} />
 
     </div>
   );
