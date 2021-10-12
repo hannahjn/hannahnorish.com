@@ -47,7 +47,7 @@ function App() {
     { title:'Node.js' },
     { title:'jQuery' },
     { title:'PostgreSQL' },
-    { title:'MongooseDB' },
+    { title:'MongoDB' },
     { title:'Polaris' },
     { title:'GraphQL' },
     { title:'Laravel' },
